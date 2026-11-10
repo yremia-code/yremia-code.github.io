@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yeremia Ega Wahyudi — Portfolio</title>
+    <meta
+      name="description"
+      content="Portofolio Yeremia Ega Wahyudi: Product Owner TalentHub, Flutter developer, dan research assistant IoT di PENS Surabaya."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .project-link-disabled {
+        cursor: default;
+        opacity: 0.45;
+        pointer-events: none;
+      }
+
+      .project-link-disabled:hover {
+        color: var(--text-2);
+        border-color: var(--border);
+        background: transparent;
+      }
+
+      .exp-card + .exp-card {
+        margin-top: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo"><span>~/</span>yeremia</a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Urutan link navigasi sudah disinkronkan dengan susunan section baru -->
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#leadership">leadership</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg-fx">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+      </div>
+      <div class="hero-grid-bg"></div>
+      <div class="hero-inner reveal active">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          Available for opportunities
+        </div>
+        <!-- Nama depan Yeremia sudah bersih ter-highlight sendirian -->
+        <h1><span class="name-accent">Yeremia</span> Ega<br />Wahyudi</h1>
+        <p class="hero-tagline">
+          Product Owner &amp; Flutter Developer<span class="tag-sep"
+            >//</span
+          >IoT Research Assistant<span class="tag-sep">//</span>PENS Surabaya
+        </p>
+        <p class="hero-desc">
+          Mahasiswa D4 Teknik Informatika dengan fondasi infrastruktur jaringan.
+          Memimpin pengembangan TalentHub, aplikasi rekrutmen Flutter di Google
+          Play, sebagai Product Owner, sambil meneliti platform IoT
+          ThingsBoard.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">Lihat Proyek</a>
+          <a
+            href="CV_Yeremia_Ega_Wahyudi_PENS.pdf"
+            target="_blank"
+            rel="noopener"
+            class="btn-outline"
+            >Unduh CV</a
+          >
+        </div>
+      </div>
+      <div class="hero-scroll reveal active delay-2">
+        <div class="scroll-line"></div>
+        scroll
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 1. ABOUT ME -->
+    <section id="about">
+      <div class="container glow-container">
+        <div class="section-label reveal">About me</div>
+        <div class="about-grid">
+          <div class="about-text reveal delay-1">
+            <p>
+              Mahasiswa <strong>D4 Teknik Informatika</strong> di
+              <strong>PENS Surabaya</strong> dengan fondasi infrastruktur
+              jaringan (MTCNA). Dari situ saya memahami komunikasi data di balik
+              sebuah aplikasi, lalu berkembang ke <em>backend</em> .NET,
+              <em>frontend</em> React, dan kini mobile dengan
+              <em>Flutter</em>.
+            </p>
+            <p>
+              Saat ini saya menjadi <strong>Product Owner TalentHub</strong>,
+              platform rekrutmen yang sudah dirilis di Google Play, dan
+              <em>research assistant</em> IoT yang meneliti platform
+              ThingsBoard. Di luar itu, saya memimpin sekitar 37 panitia
+              sebagai Ketua Panitia LKMM Tingkat Dasar dan menjadi ketua kelas
+              selama 5 semester.
+            </p>
+            <p>
+              Pengalaman yang paling berkesan justru saat magang di RSUD:
+              menyelesaikan <em>IP conflict</em> yang mengganggu jaringan rumah
+              sakit. Hal kecil, tapi dampaknya langsung terasa di operasional
+              layanan.
+            </p>
+          </div>
+          <div class="about-stats reveal delay-2">
+            <div class="stat-card glow-card">
+              <div class="glow-card-content">
+                <div class="stat-num">4</div>
+                <div class="stat-label">Projects</div>
+              </div>
+            </div>
+            <div class="stat-card glow-card">
+              <div class="glow-card-content">
+                <div class="stat-num">Sem 5</div>
+                <div class="stat-label">D4 Informatika</div>
+              </div>
+            </div>
+            <div class="stat-card glow-card">
+              <div class="glow-card-content">
+                <div class="stat-num">PENS</div>
+                <div class="stat-label">Surabaya</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 2. PROJECTS -->
+    <section id="projects">
+      <div class="container glow-container">
+        <div class="section-label reveal">Projects</div>
+        <div class="projects-grid">
+          <div class="project-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="project-top">
+                <span class="project-num">01</span>
+                <div class="project-links">
+                  <!-- Kalau sudah punya link Google Play, ganti <span> ini dengan:
+                       <a href="LINK_GOOGLE_PLAY" target="_blank" rel="noopener" class="project-link">Google Play ↗</a> -->
+                  <span class="project-link project-link-disabled"
+                    >Di Google Play</span
+                  >
+                </div>
+              </div>
+              <div class="project-name">TalentHub — Superapp Rekrutmen</div>
+              <p class="project-desc">
+                Superapp rekrutmen satu pintu untuk proses hiring internal
+                perusahaan dengan tiga peran pengguna: pelamar, recruiter, dan
+                hiring manager. Mencakup login, unggah CV, lamaran kerja,
+                manajemen lowongan, manajemen tahapan lamaran, dan penilaian
+                interview, dilengkapi fitur AI Resume ATS. Dirilis di Google
+                Play sebagai bagian dari Lab Agile Product Development, dengan
+                peran Product Owner sekaligus Mobile Developer.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Flutter</span>
+                <span class="stack-tag">flutter_bloc</span>
+                <span class="stack-tag">Figma</span>
+              </div>
+              <p class="project-highlight">
+                // Alur seleksi kandidat dari lamaran hingga penilaian interview
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card glow-card reveal delay-2">
+            <div class="glow-card-content">
+              <div class="project-top">
+                <span class="project-num">02</span>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/yremia-code/2026-peminjaman-ruangan-frontend"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link"
+                    >FE ↗</a
+                  >
+                  <a
+                    href="https://github.com/yremia-code/2026-peminjaman-ruangan-backend"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link"
+                    >BE ↗</a
+                  >
+                </div>
+              </div>
+              <div class="project-name">Sistem Peminjaman Ruangan</div>
+              <p class="project-desc">
+                Sistem manajemen peminjaman ruangan yang mencegah terjadinya
+                bentrok atau tumpang tindih jadwal antar pengguna.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">.NET</span>
+                <span class="stack-tag">C#</span>
+                <span class="stack-tag">React TS</span>
+              </div>
+              <p class="project-highlight">
+                // Logika backend validasi tabrakan jadwal (date &amp; time
+                conflict)
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card glow-card reveal delay-3">
+            <div class="glow-card-content">
+              <div class="project-top">
+                <span class="project-num">03</span>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/bagusmukti/Project-UAS"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link"
+                    >Repo ↗</a
+                  >
+                </div>
+              </div>
+              <div class="project-name">Sistem Pengaduan Masyarakat</div>
+              <p class="project-desc">
+                Platform pelaporan pengaduan berbasis web yang dibangun
+                bersama tim dengan arsitektur MVC sederhana, dengan fokus pada
+                kualitas kode serta keamanan dan validitas data melalui
+                otorisasi pengguna.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">PHP Native</span>
+                <span class="stack-tag">HTML</span>
+                <span class="stack-tag">CSS</span>
+              </div>
+              <p class="project-highlight">
+                // Kolaborasi tim, pola MVC dari nol
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="project-top">
+                <span class="project-num">04</span>
+              </div>
+              <div class="project-name">Eksplorasi IoT — Smart Agriculture</div>
+              <p class="project-desc">
+                Riset platform ThingsBoard sebagai research assistant:
+                mempelajari fungsi-fungsinya, mencoba simulasi data telemetri
+                buatan tanpa sensor fisik ke dashboard pemantauan, dan menelaah
+                paper ilmiah terkait.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">ThingsBoard</span>
+                <span class="stack-tag">MQTT</span>
+              </div>
+              <p class="project-highlight">
+                // Visualisasi data &amp; manajemen koneksi IoT
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 3. EXPERIENCE -->
+    <section id="experience">
+      <div class="container glow-container">
+        <div class="section-label reveal">Experience</div>
+
+        <div class="exp-card glow-card reveal delay-1">
+          <div class="glow-card-content">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Research Assistant (IoT)</div>
+                <div class="exp-company">
+                  Politeknik Elektronika Negeri Surabaya (PENS)
+                </div>
+              </div>
+              <span class="exp-badge">Okt 2025 – Sekarang</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Meneliti fungsi-fungsi platform ThingsBoard secara mandiri
+                melalui eksperimen langsung, termasuk simulasi data telemetri
+                buatan dengan skrip kustom, untuk memahami kapabilitas platform
+                pemantauan perangkat IoT.
+              </li>
+              <li>
+                Menganalisis fitur dashboard dan visualisasi data serta
+                menelaah paper ilmiah terkait untuk mengevaluasi efektivitas
+                pemantauan perangkat pada skala riset departemen.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-card glow-card reveal delay-2">
+          <div class="glow-card-content">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">IT Intern</div>
+                <div class="exp-company">
+                  Rumah Sakit Umum Daerah Kajen, Pekalongan &mdash; Divisi
+                  Infrastruktur TI
+                </div>
+              </div>
+              <span class="exp-badge">Maret – Juni 2023</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Membantu perbaikan dan pemeliharaan infrastruktur jaringan rumah
+                sakit secara aktif.
+              </li>
+              <li>
+                Penarikan kabel jaringan dari ruang server ke ruang dokter,
+                serta instalasi PC baru.
+              </li>
+              <li>
+                Perbaikan CCTV dan perangkat keras yang rusak akibat kendala
+                lingkungan.
+              </li>
+              <li>
+                Dukungan teknis operasional kegiatan MCU Pilkada.
+              </li>
+            </ul>
+            <div class="achievement">
+              <div class="achievement-label">&#9670; Key achievement</div>
+              <p>
+                Berhasil melakukan troubleshooting dan menyelesaikan masalah
+                <strong>IP conflict</strong> pada konfigurasi static IP jaringan
+                rumah sakit — masalah yang berdampak langsung pada operasional
+                layanan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 4. LEADERSHIP -->
+    <section id="leadership">
+      <div class="container glow-container">
+        <div class="section-label reveal">Leadership</div>
+
+        <div class="exp-card glow-card reveal delay-1">
+          <div class="glow-card-content">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Ketua Panitia LKMM Tingkat Dasar</div>
+                <div class="exp-company">
+                  Himpunan Mahasiswa Teknik Informatika
+                </div>
+              </div>
+              <span class="exp-badge">April 2026</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Memimpin sekitar 37 panitia dan membagi peran sesuai job desk
+                per divisi agar tanggung jawab jelas dan tidak tumpang tindih,
+                sehingga setiap panitia memahami tugasnya dan saling melengkapi.
+              </li>
+              <li>
+                Menyukseskan LKMM Tingkat Dasar bagi sekitar 270 peserta (9
+                kelas) dengan koordinasi antar divisi yang solid, sehingga acara
+                tetap berjalan lancar meski kondisi di lapangan tidak sesuai
+                rundown.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-card glow-card reveal delay-2">
+          <div class="glow-card-content">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Ketua Kelas</div>
+                <div class="exp-company">D4 Teknik Informatika C, PENS</div>
+              </div>
+              <span class="exp-badge">Agustus 2024 – Sekarang</span>
+            </div>
+            <ul class="exp-list">
+              <li>
+                Menjadi penghubung kelas dengan dosen wali dan himpunan selama 5
+                semester: meneruskan informasi akademik, menampung pertanyaan
+                teman sekelas, dan pada semester 1–3 mengoordinasikan
+                pembahasan kegiatan wajib himpunan.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-card glow-card reveal delay-3">
+          <div class="glow-card-content">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Liaison Officer (LO)</div>
+                <div class="exp-company">
+                  PKKMB x Technogear PENS dan LKMM Tingkat Pra-Dasar
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 5. TECHNICAL SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-label reveal">Technical skills</div>
+        <div class="skills-grid reveal delay-1">
+          <div>
+            <div class="skill-cat-title">// Mobile Development</div>
+            <div class="chips">
+              <span class="chip"><span class="chip-dot"></span>Flutter</span>
+              <span class="chip"><span class="chip-dot"></span>Dart</span>
+              <span class="chip"
+                ><span class="chip-dot"></span>flutter_bloc</span
+              >
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// Software Development</div>
+            <div class="chips">
+              <span class="chip"><span class="chip-dot"></span>.NET / C#</span>
+              <span class="chip"
+                ><span class="chip-dot"></span>React TypeScript</span
+              >
+              <span class="chip"><span class="chip-dot"></span>Java</span>
+              <span class="chip"><span class="chip-dot"></span>C</span>
+              <span class="chip"><span class="chip-dot"></span>PHP</span>
+              <span class="chip"><span class="chip-dot"></span>Python</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// Database</div>
+            <div class="chips">
+              <span class="chip"
+                ><span class="chip-dot"></span>PostgreSQL</span
+              >
+              <span class="chip"><span class="chip-dot"></span>SQLite</span>
+              <span class="chip"><span class="chip-dot"></span>MySQL</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// Web Basics</div>
+            <div class="chips">
+              <span class="chip"><span class="chip-dot"></span>HTML</span>
+              <span class="chip"><span class="chip-dot"></span>CSS</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// IoT &amp; Platform</div>
+            <div class="chips">
+              <span class="chip"><span class="chip-dot"></span>MQTT</span>
+              <span class="chip"
+                ><span class="chip-dot"></span>ThingsBoard</span
+              >
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// Networking</div>
+            <div class="chips">
+              <span class="chip"
+                ><span class="chip-dot"></span>MikroTik (MTCNA)</span
+              >
+              <span class="chip"><span class="chip-dot"></span>Fiber Optic</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// Methodology &amp; Cloud</div>
+            <div class="chips">
+              <span class="chip"><span class="chip-dot"></span>Agile</span>
+              <span class="chip"
+                ><span class="chip-dot"></span>Software Testing</span
+              >
+              <span class="chip"
+                ><span class="chip-dot"></span>Machine Learning</span
+              >
+              <span class="chip"><span class="chip-dot"></span>Data Mining</span>
+              <span class="chip"
+                ><span class="chip-dot"></span>AWS Cloud (dasar)</span
+              >
+            </div>
+          </div>
+          <div>
+            <div class="skill-cat-title">// Certifications</div>
+            <div class="chips">
+              <span class="chip"
+                ><span class="chip-dot"></span>MTCNA (2024 – 2027)</span
+              >
+              <span class="chip"
+                ><span class="chip-dot"></span>BNSP Junior Network Administrator
+                (2024 – 2027)</span
+              >
+              <span class="chip"
+                ><span class="chip-dot"></span>AWS Academy Cloud Foundations
+                (Training Badge, 2026)</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact">
+      <div class="footer-top reveal">
+        <div>
+          <div class="footer-name">yeremia_ega</div>
+          <div class="footer-tagline">
+            Product Owner &bull; Flutter Developer &bull; PENS Surabaya
+          </div>
+        </div>
+        <div class="footer-links">
+          <a
+            href="https://github.com/yremia-code"
+            target="_blank"
+            rel="noopener"
+            class="footer-link"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/yeremiaew/"
+            target="_blank"
+            rel="noopener"
+            class="footer-link"
+            >LinkedIn ↗</a
+          >
+          <a href="mailto:personalyeremia@gmail.com" class="footer-link"
+            >Email ↗</a
+          >
+          <a
+            href="CV_Yeremia_Ega_Wahyudi_PENS.pdf"
+            target="_blank"
+            rel="noopener"
+            class="footer-link"
+            >CV ↗</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom reveal delay-1">
+        <span class="footer-copy">&copy; 2026 Yeremia Ega Wahyudi</span>
+        <span class="footer-built">// built with HTML, CSS &amp; JS</span>
+      </div>
+    </footer>
+
+    <script>
+      // ── ANIMASI SCROLL REVEAL (FADE IN UP) ──
+      const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            setTimeout(() => {
+              entry.target.classList.remove(
+                "reveal",
+                "active",
+                "delay-1",
+                "delay-2",
+                "delay-3",
+              );
+            }, 1000);
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // ── SPOTLIGHT SHADOW EFFECT (KARTU INTERNAL) ──
+      document.querySelectorAll(".glow-container").forEach((container) => {
+        container.addEventListener("mousemove", (e) => {
+          container.querySelectorAll(".glow-card").forEach((card) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+          });
+        });
+      });
+
+      // ── BLUR NAV ON SCROLL ──
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        window.scrollY > 40
+          ? navbar.classList.add("nav-scrolled")
+          : navbar.classList.remove("nav-scrolled");
+      });
+
+      // ── INTERAKTIF HAMBURGER MENU MOBILE ──
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      const navLinksDetail = document.querySelectorAll(".nav-links a");
+
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("toggle-active");
+        navMenu.classList.toggle("menu-active");
+      });
+
+      navLinksDetail.forEach((link) => {
+        link.addEventListener("click", () => {
+          navToggle.classList.remove("toggle-active");
+          navMenu.classList.remove("menu-active");
+        });
+      });
+
+      // ── GLOBAL MOUSE SHADOW BLUE GLOW EFFECT ──
+      const cursorGlow = document.createElement("div");
+      cursorGlow.id = "cursor-glow";
+      document.body.appendChild(cursorGlow);
+
+      document.addEventListener("mousemove", (e) => {
+        cursorGlow.style.left = `${e.clientX}px`;
+        cursorGlow.style.top = `${e.clientY}px`;
+      });
+    </script>
+  </body>
+</html>
