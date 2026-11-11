@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TalentHub — Studi Kasus | Yeremia Ega Wahyudi</title>
+    <meta
+      name="description"
+      content="Studi kasus TalentHub: aplikasi mobile rekrutmen Flutter di Google Play. Peran: Product Owner dan Mobile Developer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* Tambahan khusus halaman studi kasus */
+      .cs-head {
+        padding: 9rem 0 4rem;
+      }
+      .cs-back {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--text-2);
+        text-decoration: none;
+        margin-bottom: 2rem;
+        transition: color 0.2s;
+      }
+      .cs-back:hover {
+        color: var(--cyan);
+      }
+      .cs-title {
+        font-size: clamp(2.6rem, 7vw, 4.2rem);
+        font-weight: 500;
+        line-height: 1.1;
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+      .cs-sub {
+        font-size: 1.1rem;
+        color: var(--text-2);
+        max-width: 620px;
+        margin-bottom: 2rem;
+      }
+      .cs-meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 1.25rem 2rem;
+        margin-bottom: 2.5rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .cs-meta dt {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--cyan);
+        margin-bottom: 0.25rem;
+      }
+      .cs-meta dd {
+        font-size: 0.95rem;
+        color: var(--text);
+      }
+      .cs-section {
+        padding: 3.5rem 0;
+      }
+      .cs-text p {
+        color: var(--text-2);
+        margin-bottom: 1rem;
+        max-width: 660px;
+      }
+      .cs-text p strong {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .cs-source {
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--text-3);
+      }
+      .cs-source a {
+        color: var(--cyan);
+        text-decoration: none;
+      }
+      .cs-list {
+        list-style: none;
+        display: grid;
+        gap: 0.9rem;
+        max-width: 660px;
+      }
+      .cs-list li {
+        position: relative;
+        padding-left: 1.4rem;
+        color: var(--text-2);
+      }
+      .cs-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--cyan);
+      }
+      .cs-list li strong {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .cs-cols {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+      }
+      .cs-note {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--text-3);
+        max-width: 660px;
+      }
+      .cs-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 1rem;
+      }
+      .cs-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .cs-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+      .cs-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo"><span>~/</span>yeremia</a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="../index.html#about">about</a></li>
+          <li><a href="../index.html#projects">projects</a></li>
+          <li><a href="../index.html#experience">experience</a></li>
+          <li><a href="../index.html#leadership">leadership</a></li>
+          <li><a href="../index.html#skills">skills</a></li>
+          <li><a href="../index.html#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="cs-head">
+      <div class="container">
+        <a href="../index.html#projects" class="cs-back">← kembali ke projects</a>
+        <div class="section-label">Case study</div>
+        <h1 class="cs-title">TalentHub</h1>
+        <p class="cs-sub">
+          Aplikasi mobile rekrutmen untuk kandidat, HR recruiter, dan hiring
+          manager, dari lowongan hingga offer letter dalam satu platform.
+        </p>
+
+        <dl class="cs-meta">
+          <div>
+            <dt>// Peran</dt>
+            <dd>Product Owner &amp; Mobile Developer</dd>
+          </div>
+          <div>
+            <dt>// Tim</dt>
+            <dd>IT PENS x AgileTeknik</dd>
+          </div>
+          <div>
+            <dt>// Status</dt>
+            <dd>Rilis di Google Play, terus diperbarui</dd>
+          </div>
+          <div>
+            <dt>// Stack</dt>
+            <dd>Flutter, flutter_bloc, Melos monorepo</dd>
+          </div>
+        </dl>
+
+        <div class="cs-cta">
+          <a
+            href="https://play.google.com/store/apps/details?id=id.ac.pens.it.talenthub"
+            target="_blank"
+            rel="noopener"
+            class="btn-primary"
+            >Buka di Google Play</a
+          >
+          <a
+            href="https://sindika.co.id/en/product-plan/talenthub/"
+            target="_blank"
+            rel="noopener"
+            class="btn-outline"
+            >Product plan (Sindika)</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <hr class="divider" />
+
+    <!-- MASALAH -->
+    <section class="cs-section">
+      <div class="container glow-container">
+        <div class="section-label reveal">Masalah</div>
+        <div class="cs-text reveal delay-1">
+          <p>
+            Rekrutmen yang berjalan tanpa sistem terstruktur biasanya berantakan
+            di beberapa titik. <strong>Lamaran tercecer</strong> di email dan
+            aplikasi chat, <strong>pelamar menunggu lama</strong> tanpa kabar,
+            dan <strong>setiap interviewer menilai dengan standar sendiri</strong>.
+            Tim HR juga sulit melihat posisi tiap kandidat di tahap mana, dan
+            jadwal interview yang dikoordinasikan lewat chat sering bentrok.
+          </p>
+          <p>
+            TalentHub dirancang untuk menyatukan proses itu: lowongan, pipeline
+            kandidat, wawancara, penilaian, sampai penawaran kerja.
+          </p>
+          <p class="cs-source">
+            // Latar masalah mengacu pada
+            <a
+              href="https://sindika.co.id/en/product-plan/talenthub/"
+              target="_blank"
+              rel="noopener"
+              >product plan TalentHub oleh Sindika</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- PERAN -->
+    <section class="cs-section">
+      <div class="container glow-container">
+        <div class="section-label reveal">Peran saya</div>
+        <div class="cs-cols">
+          <div class="exp-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="exp-title">Product Owner</div>
+              <ul class="exp-list">
+                <li>
+                  Memastikan proses pengembangan berjalan lancar dan menjaga
+                  progres tim developer.
+                </li>
+                <li>
+                  Menentukan arah pengembangan aplikasi dan keputusan alur
+                  produk.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp-card glow-card reveal delay-2">
+            <div class="glow-card-content">
+              <div class="exp-title">Mobile Developer</div>
+              <ul class="exp-list">
+                <li>
+                  Menyusun arsitektur monorepo Flutter (Melos, 4 package) dengan
+                  state management flutter_bloc.
+                </li>
+                <li>
+                  Mengimplementasikan autentikasi JWT dengan refresh token
+                  otomatis, penyimpanan kredensial aman, dan kontrol akses per
+                  peran.
+                </li>
+                <li>
+                  Mengerjakan fitur lowongan, pipeline pelamar, skor ATS berbasis
+                  AI, scorecard, dan penjadwalan wawancara, serta menulis unit
+                  dan widget test.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- KEPUTUSAN PRODUK -->
+    <section class="cs-section">
+      <div class="container glow-container">
+        <div class="section-label reveal">Keputusan produk</div>
+        <ul class="cs-list reveal delay-1">
+          <li>
+            <strong>Penjadwalan wawancara.</strong> HR menjadwalkan wawancara
+            (online atau onsite), kandidat mengonfirmasi kehadiran, dan jadwal
+            terdekat tampil di dashboard HR sehingga tidak perlu koordinasi
+            lewat chat.
+          </li>
+          <li>
+            <strong>Scorecard.</strong> Template penilaian dengan bobot per
+            kategori dipasang ke tiap lowongan, dan hasil penilaian disimpan
+            sebagai draf sebelum dikirim agar konsisten antar interviewer.
+          </li>
+          <li>
+            <strong>Alur melamar.</strong> Sistem memeriksa kelengkapan profil
+            dan CV sebelum lamaran dikirim, dan kandidat dapat memakai CV khusus
+            untuk lowongan tertentu.
+          </li>
+          <li>
+            <strong>Penolakan.</strong> Memindahkan kandidat ke tahap tolak
+            mewajibkan alasan penolakan.
+          </li>
+          <li>
+            <strong>Offer letter.</strong> HR menyusun draf, tetapi hanya Hiring
+            Manager yang mengesahkan dan mengirimnya. Kandidat dapat melihat,
+            mengunduh PDF, lalu menerima atau menolak penawaran.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- FITUR -->
+    <section class="cs-section">
+      <div class="container glow-container">
+        <div class="section-label reveal">Fitur aplikasi</div>
+        <div class="chips reveal delay-1" style="margin-bottom: 2rem">
+          <span class="chip"><span class="chip-dot"></span>Job Posting</span>
+          <span class="chip"
+            ><span class="chip-dot"></span>Manajemen Applicant</span
+          >
+          <span class="chip"
+            ><span class="chip-dot"></span>Kanban Pipeline</span
+          >
+          <span class="chip"
+            ><span class="chip-dot"></span>Skor ATS berbasis AI</span
+          >
+          <span class="chip"><span class="chip-dot"></span>Interview</span>
+          <span class="chip"
+            ><span class="chip-dot"></span>Scorecard Interview</span
+          >
+          <span class="chip"><span class="chip-dot"></span>Offer Letter</span>
+          <span class="chip"><span class="chip-dot"></span>Profil &amp; CV</span>
+        </div>
+        <div class="cs-cols">
+          <div class="exp-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="exp-title">HR Recruiter</div>
+              <ul class="exp-list">
+                <li>Buat lowongan lewat form tiga langkah (informasi, rincian, pratinjau) dengan auto-save draf, lalu edit, terbitkan, dan tutup.</li>
+                <li>Cari dan filter lowongan, serta salin tautan lowongan.</li>
+                <li>Kelola pelamar di pipeline dengan drag-and-drop antar tahapan.</li>
+                <li>Lihat skor kecocokan resume berbasis AI beserta ringkasan kandidat.</li>
+                <li>Jadwalkan wawancara dan pantau metrik di dashboard.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp-card glow-card reveal delay-2">
+            <div class="glow-card-content">
+              <div class="exp-title">Hiring Manager</div>
+              <ul class="exp-list">
+                <li>Kelola template scorecard dan pasang ke lowongan.</li>
+                <li>Isi penilaian kandidat per kategori beserta catatan wawancara.</li>
+                <li>Mengesahkan dan mengirim offer letter.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp-card glow-card reveal delay-3">
+            <div class="glow-card-content">
+              <div class="exp-title">Kandidat</div>
+              <ul class="exp-list">
+                <li>Registrasi dengan verifikasi email, serta lupa dan ubah kata sandi.</li>
+                <li>Jelajahi, filter, dan simpan lowongan, lalu lamar dengan CV.</li>
+                <li>Pantau status lamaran lewat timeline dan konfirmasi jadwal wawancara.</li>
+                <li>Lihat, unduh, dan respons offer letter.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- TEKNIS -->
+    <section class="cs-section">
+      <div class="container glow-container">
+        <div class="section-label reveal">Keamanan &amp; kualitas kode</div>
+        <div class="cs-cols">
+          <div class="exp-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="exp-title">Keamanan</div>
+              <ul class="exp-list">
+                <li>Autentikasi JWT dengan refresh token otomatis, baik sebelum token kedaluwarsa maupun saat menerima error 401.</li>
+                <li>Kredensial disimpan terenkripsi di Android Keystore dan iOS Keychain.</li>
+                <li>Akses per peran lewat landing page dan RoleGuard untuk aksi sensitif.</li>
+                <li>Bypass sertifikat SSL hanya aktif pada mode debug.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp-card glow-card reveal delay-2">
+            <div class="glow-card-content">
+              <div class="exp-title">Kualitas kode</div>
+              <ul class="exp-list">
+                <li>Penanganan error terpusat: timeout, koneksi terputus, validasi 422, serta status 401, 403, 404, dan 409.</li>
+                <li>Arsitektur monorepo dengan pemisahan event, state, dan bloc di setiap modul.</li>
+                <li>23 file test: 15 unit test dan 8 widget test.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- HASIL -->
+    <section class="cs-section">
+      <div class="container glow-container">
+        <div class="section-label reveal">Hasil</div>
+        <div class="cs-stats">
+          <div class="stat-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="stat-num">Live</div>
+              <div class="stat-label">Rilis di Google Play</div>
+            </div>
+          </div>
+          <div class="stat-card glow-card reveal delay-2">
+            <div class="glow-card-content">
+              <div class="stat-num">26</div>
+              <div class="stat-label">Halaman</div>
+            </div>
+          </div>
+          <div class="stat-card glow-card reveal delay-3">
+            <div class="glow-card-content">
+              <div class="stat-num">13</div>
+              <div class="stat-label">BLoC</div>
+            </div>
+          </div>
+          <div class="stat-card glow-card reveal delay-1">
+            <div class="glow-card-content">
+              <div class="stat-num">38</div>
+              <div class="stat-label">Endpoint API</div>
+            </div>
+          </div>
+          <div class="stat-card glow-card reveal delay-2">
+            <div class="glow-card-content">
+              <div class="stat-num">345</div>
+              <div class="stat-label">Dari 414 commit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI SCREENSHOT
+         Aktifkan blok ini setelah screenshot siap (data contoh, bukan data asli).
+         Simpan gambar di folder projects/img/ lalu hapus tanda komentar.
+
+    <hr class="divider" />
+    <section class="cs-section">
+      <div class="container">
+        <div class="section-label">Tampilan aplikasi</div>
+        <div class="cs-gallery">
+          <img src="img/talenthub-1.png" alt="Dashboard HR TalentHub" />
+          <img src="img/talenthub-2.png" alt="Kanban pipeline kandidat" />
+          <img src="img/talenthub-3.png" alt="Scorecard interview" />
+          <img src="img/talenthub-4.png" alt="Offer letter" />
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="footer-top">
+        <div>
+          <div class="footer-name">yeremia_ega</div>
+          <div class="footer-tagline">
+            Product Owner &bull; Flutter Developer &bull; PENS Surabaya
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html#projects" class="footer-link">← Projects</a>
+          <a
+            href="https://github.com/yremia-code"
+            target="_blank"
+            rel="noopener"
+            class="footer-link"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/yeremiaew/"
+            target="_blank"
+            rel="noopener"
+            class="footer-link"
+            >LinkedIn ↗</a
+          >
+          <a href="mailto:personalyeremia@gmail.com" class="footer-link"
+            >Email ↗</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Yeremia Ega Wahyudi</span>
+        <span class="footer-built">// built with HTML, CSS &amp; JS</span>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              setTimeout(() => {
+                entry.target.classList.remove(
+                  "reveal",
+                  "active",
+                  "delay-1",
+                  "delay-2",
+                  "delay-3",
+                );
+              }, 1000);
+            }
+          });
+        },
+        { root: null, rootMargin: "0px", threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Spotlight pada kartu
+      document.querySelectorAll(".glow-container").forEach((container) => {
+        container.addEventListener("mousemove", (e) => {
+          container.querySelectorAll(".glow-card").forEach((card) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+            card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+          });
+        });
+      });
+
+      // Blur nav saat scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        window.scrollY > 40
+          ? navbar.classList.add("nav-scrolled")
+          : navbar.classList.remove("nav-scrolled");
+      });
+
+      // Menu hamburger
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("toggle-active");
+        navMenu.classList.toggle("menu-active");
+      });
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navToggle.classList.remove("toggle-active");
+          navMenu.classList.remove("menu-active");
+        });
+      });
+
+      // Cursor glow
+      const cursorGlow = document.createElement("div");
+      cursorGlow.id = "cursor-glow";
+      document.body.appendChild(cursorGlow);
+      document.addEventListener("mousemove", (e) => {
+        cursorGlow.style.left = `${e.clientX}px`;
+        cursorGlow.style.top = `${e.clientY}px`;
+      });
+    </script>
+  </body>
+</html>
